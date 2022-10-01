@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<robot name="cobotta" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:macro name="cobotta_ros2_control" params="name">
+  <ros2_control name="${name}" type="system">
+    <hardware>
+      <plugin>fake_components/GenericSystem</plugin>
+    </hardware>
+
+    <joint name="joint_1">
+      <command_interface name="position">
+        <param name="min">-2.620</param>
+        <param name="max">2.620</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_2">
+      <command_interface name="position">
+        <param name="min">-1.050</param>
+        <param name="max">1.750</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_3">
+      <command_interface name="position">
+        <param name="min">-0.870</param>
+        <param name="max">1.260</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_4">
+      <command_interface name="position">
+        <param name="min">-2.970</param>
+        <param name="max">2.970</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_5">
+      <command_interface name="position">
+        <param name="min">-0.790</param>
+        <param name="max">3.230</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_6">
+      <command_interface name="position">
+        <param name="min">-2.970</param>
+        <param name="max">2.970</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+  </ros2_control>
+</xacro:macro>
+
+</robot>

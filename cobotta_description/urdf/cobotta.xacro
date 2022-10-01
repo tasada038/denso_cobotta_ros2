@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<robot name="cobotta" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find cobotta_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find cobotta_description)/urdf/cobotta.trans.xacro" />
+  <xacro:include filename="$(find cobotta_description)/urdf/cobotta.gazebo.xacro" />
+  <xacro:include filename="$(find cobotta_description)/urdf/cobotta_description.xacro" />
+  <xacro:cobotta_description body_color="white" hand_color="silver" />
+
+  <!-- Import cobotta ros2_control description -->
+  <xacro:include filename="$(find cobotta_description)/urdf/cobotta_ros2_control.xacro" />
+  <xacro:include filename="$(find cobotta_description)/urdf/cobotta_hand_ros2_control.xacro" />
+  <xacro:cobotta_ros2_control name="CobottaFakeSystem"/>
+  <xacro:cobotta_hand_ros2_control name="CobottaHandFakeSystem"/>
+
+</robot>

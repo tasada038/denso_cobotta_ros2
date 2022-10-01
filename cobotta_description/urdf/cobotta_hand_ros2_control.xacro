@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<robot name="cobotta" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+
+<xacro:macro name="cobotta_hand_ros2_control" params="name">
+  <ros2_control name="${name}" type="system">
+    <hardware>
+      <plugin>fake_components/GenericSystem</plugin>
+    </hardware>
+    <joint name="joint_gripper_right">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">0.015</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="joint_gripper_left">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">0.015</param>
+        <param name="mimic">joint_gripper_right</param>
+        <param name="multiplier">1</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+  </ros2_control>
+</xacro:macro>
+
+</robot>

@@ -1,0 +1,262 @@
+<?xml version="1.0" ?>
+<robot name="cobotta" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="cobotta_description" params="body_color hand_color">
+
+    <link name="base_link">
+      <inertial>
+        <origin xyz="-0.020549106485238677 3.1259498413214096e-05 0.04559160098075627" rpy="0 0 0"/>
+        <mass value="1.5781582461079724"/>
+        <inertia ixx="0.002994" iyy="0.004044" izz="0.00462" ixy="2e-06" iyz="1e-06" ixz="-0.000325"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${body_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_J1_1">
+      <inertial>
+        <origin xyz="1.506916064037097e-05 0.00666412864646179 0.04865451977413286" rpy="0 0 0"/>
+        <mass value="0.7006266882863252"/>
+        <inertia ixx="0.001062" iyy="0.000935" izz="0.000791" ixy="-0.0" iyz="-0.000116" ixz="-0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.0 1.5e-05 -0.108" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${body_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="0.0 1.5e-05 -0.108" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J1_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_J2_1">
+      <inertial>
+        <origin xyz="-0.012988877232577948 0.032873044529823474 0.07592860432777343" rpy="0 0 0"/>
+        <mass value="0.7962111154190773"/>
+        <inertia ixx="0.003728" iyy="0.003891" izz="0.000591" ixy="5.6e-05" iyz="-3.2e-05" ixz="5.4e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.00013 -0.057484 -0.179" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J2_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${body_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.00013 -0.057484 -0.179" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J2_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_J3_1">
+      <inertial>
+        <origin xyz="0.026665913767960465 -0.03417921477653342 0.005268607610949438" rpy="0 0 0"/>
+        <mass value="0.40840408613020135"/>
+        <inertia ixx="0.00025" iyy="0.00054" izz="0.000553" ixy="4.1e-05" iyz="8e-06" ixz="-5.9e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.00013 -0.057484 -0.344" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J3_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${body_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.00013 -0.057484 -0.344" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J3_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_J4_1">
+      <inertial>
+        <origin xyz="0.05294869417808633 -0.001540680596419295 -2.2291022191422982e-06" rpy="0 0 0"/>
+        <mass value="0.30235423023011887"/>
+        <inertia ixx="0.00013" iyy="0.00038" izz="0.000385" ixy="1.8e-05" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.088045 -0.019785 -0.356" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J4_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${body_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.088045 -0.019785 -0.356" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J4_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_J5_1">
+      <inertial>
+        <origin xyz="-0.00016233112793306859 -0.02805478130968956 -0.007894039727077973" rpy="0 0 0"/>
+        <mass value="0.17118402548820483"/>
+        <inertia ixx="9.5e-05" iyy="8.2e-05" izz="8e-05" ixy="-0.0" iyz="-8e-06" ixz="-0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.176475 0.011415 -0.356" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J5_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${body_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.176475 0.011415 -0.356" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J5_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_J6_1">
+      <inertial>
+        <origin xyz="1.1133816266162277e-07 -2.066373373868502e-07 -0.021067848009415968" rpy="0 0 0"/>
+        <mass value="0.0873043297858215"/>
+        <inertia ixx="2.9e-05" iyy="2.5e-05" izz="3.8e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.176401 0.043915 -0.316" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J6_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${body_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.176401 0.043915 -0.316" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/link_J6_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="right_gripper_1">
+      <inertial>
+        <origin xyz="1.3166972129496912e-05 0.005685756318288243 -0.01524036746563423" rpy="0 0 0"/>
+        <mass value="0.00661512964737902"/>
+        <inertia ixx="0.0" iyy="1e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.176338 0.071665 -0.2828" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/right_gripper_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${hand_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.176338 0.071665 -0.2828" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/right_gripper_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="left_gripper_1">
+      <inertial>
+        <origin xyz="-1.2942144417854573e-05 -0.005685227847051791 -0.015240367465634008" rpy="0 0 0"/>
+        <mass value="0.00661512964737902"/>
+        <inertia ixx="0.0" iyy="1e-06" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.176464 0.016165 -0.2828" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/left_gripper_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="${hand_color}"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.176464 0.016165 -0.2828" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://cobotta_description/meshes/left_gripper_1.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="joint_1" type="revolute">
+      <origin xyz="0.0 -1.5e-05 0.108" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_J1_1"/>
+      <axis xyz="0.0 0.0 -1.0"/>
+      <limit upper="2.620" lower="-2.620" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="joint_2" type="revolute">
+      <origin xyz="0.00013 0.057499 0.071" rpy="0 0 0"/>
+      <parent link="link_J1_1"/>
+      <child link="link_J2_1"/>
+      <axis xyz="0.002263 0.999997 0.0"/>
+      <limit upper="1.750" lower="-1.050" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="joint_3" type="revolute">
+      <origin xyz="0.0 0.0 0.165" rpy="0 0 0"/>
+      <parent link="link_J2_1"/>
+      <child link="link_J3_1"/>
+      <axis xyz="-0.002263 -0.999997 -0.0"/>
+      <limit upper="1.260" lower="-0.870" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="joint_4" type="revolute">
+      <origin xyz="0.087915 -0.037699 0.012" rpy="0 0 0"/>
+      <parent link="link_J3_1"/>
+      <child link="link_J4_1"/>
+      <axis xyz="0.999997 -0.002263 0.0"/>
+      <limit upper="2.970" lower="-2.970" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="joint_5" type="revolute">
+      <origin xyz="0.08843 -0.0312 0.0" rpy="0 0 0"/>
+      <parent link="link_J4_1"/>
+      <child link="link_J5_1"/>
+      <axis xyz="-0.002263 -0.999997 -0.0"/>
+      <limit upper="3.230" lower="-0.790" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="joint_6" type="revolute">
+      <origin xyz="-7.4e-05 -0.0325 -0.04" rpy="0 0 0"/>
+      <parent link="link_J5_1"/>
+      <child link="link_J6_1"/>
+      <axis xyz="0.0 0.0 -1.0"/>
+      <limit upper="2.970" lower="-2.970" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="joint_gripper_right" type="prismatic">
+      <origin xyz="-6.3e-05 -0.02775 -0.0332" rpy="0 0 0"/>
+      <parent link="link_J6_1"/>
+      <child link="right_gripper_1"/>
+      <axis xyz="0.002263 0.999997 0.0"/>
+      <limit upper="0.015" lower="0.0" effort="100" velocity="100"/>
+    </joint>
+
+    <joint name="joint_gripper_left" type="prismatic">
+      <origin xyz="6.3e-05 0.02775 -0.0332" rpy="0 0 0"/>
+      <parent link="link_J6_1"/>
+      <child link="left_gripper_1"/>
+      <axis xyz="-0.002263 -0.999997 -0.0"/>
+      <limit upper="0.015" lower="0.0" effort="100" velocity="100"/>
+      <mimic joint="joint_gripper_right" />
+    </joint>
+
+  </xacro:macro>
+
+</robot>
